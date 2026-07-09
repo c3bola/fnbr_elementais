@@ -1,4 +1,4 @@
-// Manipula a codificação e decodificação do progresso da coleção em chaves de parâmetros de URL
+// Handles encoding and decoding collection progress into URL parameter keys
 function compressCollection(baseList, activeObtained, activeMastered) {
     let bitString = '';
     baseList.forEach(sprite => {
@@ -46,7 +46,7 @@ function decompressCollection(baseList, compressedString) {
         });
         return { obtained: obtainedIds, mastered: masteredIds };
     } catch (e) {
-        console.error("Falha ao decodificar a string de sequência da coleção de elementos", e);
+        console.error("Failed to decode collection sequence string", e);
         return { obtained: [], mastered: [] };
     }
 }
